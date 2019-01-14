@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<HEAD>
+<title>Airline-delay-Prediction App</title>
+<style>
+label{
+display:inline-block;
+width:200px;
+margin-right:30px;
+text-align:right;
+}
+
+input{
+
+}
+
+fieldset{
+border:none;
+width:500px;
+margin:0px auto;
+}
+
+</style>
+</HEAD>
+<h1 align="flight">FLIGHT DELAY PREDICTION </h1>
+<body class="parallax">
+	<p align="left">  CARRIER :10-UNITED AIRLINES <br>	
+	                  ORIGIN  :210-ATLANTA AIRPORT <br>
+	                          :219-CHICAGO O'HARE  AIRPORT<br>
+	                          :36-DENVER AIRPORT<br>
+	                  DEST    :101-GEORGE BUSH AIRPORT<br>
+	                  		  :12-ALBANY AIRPORT<br>
+
+<form action = "{{ url_for('page') }}" method="POST" id="flight_predict" align='center'>
+<fieldset>
+	<p><label for="txtselectyear">Select year:<input name="year" type ="text"   /> </p>
+	<p><label for="txtmonth">Select month:<input name="month" type ="text"  /> </p>
+	<p><label for="txtday">Select day:<input name="day" type ="text"   /> </p>
+	<p><label for="txtdate">Select Date:<input name="date" type ="date"  /> </p>
+	<p><label for="carrier">Select carrier:<input name="carrier"  type="text"   >
+	<p><label for="txtorigin">Select Origin:<input name="origin" type ="text"  /> </p>
+	<p><label for="txtdest">Select Destination:<input name="dest" type ="text"   /> </p>
+</fieldset>
+</form>
+	<p align="center"> <input type ="submit" value="submit" form="flight_predict" value="Submit" align="left"  /> </p>
+
+
+
+	
+    
+    
+	<!--<p> Select arrival time <input name="arrtime" type ="time" value="22:30" /> </p> 
+	<p> Select departure time <input name="depttime" type ="time" value="13:30" /> </p>-->
+
+	
+</body>
+</html>
